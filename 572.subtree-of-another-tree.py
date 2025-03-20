@@ -14,6 +14,8 @@
 #         self.right = right
 class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+
+        # def check sametree
         def isSameTree(p, q):
 
             if not q and not p:
@@ -27,6 +29,7 @@ class Solution:
 
             return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
 
+        # def check root = subroot
         def has_subtree(root):
 
             if not root:
